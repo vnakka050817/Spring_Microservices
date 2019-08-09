@@ -22,8 +22,8 @@ public class OrderController {
 				
 			
 			Order order = new Order();
-			String customerUrl = "http://localhost:8081/customers/{id}";
-			String productUrl = "http://localhost:8082/products/{id}";
+			String customerUrl = "http://localhost:8082/customers/{id}";
+			String productUrl = "http://localhost:8081/products/{id}";
 			
 			Customer customer = restTemplate.getForObject(customerUrl,Customer.class,customerId);
 			Product product = restTemplate.getForObject(productUrl,Product.class,productId);
